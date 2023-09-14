@@ -39,8 +39,7 @@ def task04():
             string = string[index + next_word.start():]  # Mettre à jour la chaîne pour continuer la recherche
 
     print(sentence)
-
-
+    
 # task00()
 # task01()
 # task02()
