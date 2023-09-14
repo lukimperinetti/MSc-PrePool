@@ -47,17 +47,14 @@ def task05():
     integer = int(input('Entrez un INT >>> '))
     end = integer//2
     start = 2
-
+    multiple = []
     for cnt in range(start, end+1):
-        # if (integer%cnt)==0:
-        for num in range(start, integer+1):
-            if (integer%start)==0 :
-                print(num)
-            cnt += 1
-            
-        print('out')
+        multiple = []
+        for num in range(start, integer):
+            if (num%cnt)==0 :
+                multiple.append(num)
         start += 1
-
+        print(multiple[::-1])
 
 def challenge():
     integer = int(input('entrez un int >>> '))
@@ -79,5 +76,5 @@ def challenge():
 # task02()
 # task03()
 # task04()
-# task05() TODO : a faire
-challenge()
+task05() #TODO : a faire
+# challenge()
