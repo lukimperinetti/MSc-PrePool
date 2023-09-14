@@ -76,5 +76,5 @@ def challenge():
 # task02()
 # task03()
 # task04()
-task05() #TODO : a faire
+task05()
 # challenge()
