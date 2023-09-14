@@ -24,13 +24,13 @@ def task02():
 def task03():
     minus = -30
     max = 30
-    for cnt in range(minus, max):
-        if (cnt%3)==0:
+    for cnt in range(minus, max+1):
+        if (cnt%3)==0 and (cnt%5)==0:
+            print('FizzBuzz')
+        elif (cnt%3)==0:
             print('Fizz')
         elif (cnt%5)==0:
             print('Buzz')
-        elif (cnt%3)==0 and (cnt%5)==0:
-            print('FizzBuzz')
         else :
             print(cnt)
 
@@ -74,7 +74,7 @@ def challenge():
 # task00()
 # task01()
 # task02()
-# task03()
+task03()
 # task04()
-task05()
+# task05()
 # challenge()
