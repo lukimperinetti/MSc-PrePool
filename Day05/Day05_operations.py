@@ -84,6 +84,8 @@ def challenge():
         randomlist.append(n)
     print(randomlist)
 
+    # 0,6 sec sur jupyter, a faire en comprehensive plus tard
+
 
 # task01()
 # task02()
