@@ -66,7 +66,7 @@ def task00():
     print(digit)
 
 
-string = input('entrez une chaine de caractères: ')
-number = int(input('entrez un nombre: '))
+    string = input('entrez une chaine de caractères: ')
+    number = int(input('entrez un nombre: '))
 
 task00()
