@@ -21,16 +21,14 @@ def task01():
 
 
 
-def task02(path='/home/lukimperinetti/Documents/MSc-PrePool/', visited = set()):
-    if path not in visited:
-        for root,dirs,files in os.walk(path, topdown=True):
-            print (root)
-            print (dirs)
-            print (files)
-            for all in dirs:
-                path = os.path.join(root, all)
-                task02(path, visited)
-    
+def task02(path='/home/lukimperinetti/Documents/MSc-PrePool/'):
+    for root,dirs,files in os.walk(path):
+        print (root)
+        print (dirs)
+        print (files)
+        for all in dirs:
+            path = os.path.join(root, all)
+            task02(path)
 
 
 # task01()
