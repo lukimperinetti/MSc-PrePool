@@ -2,6 +2,7 @@
 
 from tkinter import *
 from tkinter.ttk import *
+from random import randint
 
 # creates a Tk() object
 master = Tk()
@@ -38,6 +39,16 @@ canvas.create_line(500, 300, 700, 380, fill = "orange", width=3)
 
 def upperit(n):
     print(n.upper())
+
+def dessiner(item=None):
+    canvas.delete(item)
+    a=randint(1,90)
+    b=randint(1,50)
+    c=50
+    item=canvas.create_rectangle(a, b, a+c, b+c, fill='blue', outline='')
+    canvas.after(1000, dessiner, item)
+
+dessiner()
 
 # mainloop, runs infinitely
 mainloop()
