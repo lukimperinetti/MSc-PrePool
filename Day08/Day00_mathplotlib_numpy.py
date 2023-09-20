@@ -33,8 +33,6 @@ def task03():
     show(x, y)
 
 def task04():
-    x = list(map(int, input("Enter the array X: ").strip().split()))
-
     # Fontion donnée qui calcule la valeur Y pour chaque valeur X
     def f(x):
         return x**2 + x*3 + 1
