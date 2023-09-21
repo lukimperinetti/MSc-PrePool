@@ -5,12 +5,15 @@ from player import Player
 import sys
 
 pygame.init()
+pygame.font.init()
 
 
 class Game:
     def __init__(self):
         # Create the game screen
         self.screen = pygame.display.set_mode((800, 800))
+        self.font = pygame.font.SysFont("Arial", 36)
+        self.letters = []
         pygame.display.set_caption("The Hangman Game")
 
         # Load the map
@@ -39,10 +42,12 @@ class Game:
 
     def process_input(self, key):
         # Handle the input
-        print("Key pressed:", key)
-        
+        if key >= pygame.K_a and key <= pygame.K_z:
+            letter = chr(key)
+            print("Letter pressed:", letter)
+            # Add the letter to the list of letters
+            self.letters.append(letter)     
 
-    
     def run(self):
         # Game loop
         running = True
@@ -53,6 +58,13 @@ class Game:
                     running = False
                 elif event.type == pygame.KEYDOWN:
                     self.handle_input(event.key)
+
+
+
+
+
+
+
 
             # Update the game state
             self.group.update()
